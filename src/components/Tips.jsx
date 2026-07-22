@@ -1,35 +1,55 @@
 import styles from './Tips.module.css'
 
-const TIPS = [
+const SECTIONS = [
   {
-    num: '01',
-    title: 'Learn the timeline anchors first',
-    body: 'Every deadline is relative to Close, TOB, TOE, or BI Date. Know those four dates for your current project before anything else — everything flows from them.',
+    category: 'For Success in the Team',
+    tips: [
+      {
+        num: '01',
+        title: 'Understand what the team does',
+        body: 'The Software Integration & Transformation team coordinates IBM\'s M&A integrations — when IBM acquires a company, we make sure every workstream (IT, finance, real estate, contracts, data) stays on track. Understanding this big picture early will help everything else make sense.',
+      },
+      {
+        num: '02',
+        title: 'Learn the acronyms',
+        body: 'The team runs on acronyms — TOB, TOE, BI Date, TPSRM, GTM, Q2C and more. Take time in your first week to go through the glossary and ask what comes up in meetings. You\u2019ll follow conversations much faster.',
+      },
+      {
+        num: '03',
+        title: 'Know your workstream leads',
+        body: 'Workstream leads are the people you\u2019ll see in every meeting — they own their area and drive decisions. Identify them early, learn their names and roles, and understand what they\u2019re responsible for. They\u2019re your main contacts.',
+      },
+      {
+        num: '04',
+        title: 'Take notes in every meeting',
+        body: 'Every meeting has a lot going on. Document what\u2019s discussed, what actions are assigned, and what questions come up. It helps you build a picture of what\u2019s happening and catch things you didn\u2019t fully understand the first time.',
+      },
+      {
+        num: '05',
+        title: 'Ask questions — even the "obvious" ones',
+        body: 'These processes are complex and interconnected. If something doesn\u2019t make sense, ask. You\u2019ll learn faster and your team will appreciate the engagement.',
+      },
+    ],
   },
   {
-    num: '02',
-    title: 'Start approval processes early — always',
-    body: 'TPSRM, GPO, CIO-163, Slack integrations, badge provisioning — all take time. If you think it\u2019s too early to start, it\u2019s probably the right time. Delays here cascade across the whole integration.',
-  },
-  {
-    num: '03',
-    title: 'Identify workstream leads and acquisition focals immediately',
-    body: 'Every workstream needs an IBM lead and an acquisition focal. Finding these people early is the single most important first step in any process. You can\u2019t drive anything without them.',
-  },
-  {
-    num: '04',
-    title: 'Document pain points as they happen',
-    body: 'This guide exists because someone took notes during DataStax. Every integration surfaces new issues — write them down in real time so the next team doesn\u2019t repeat them.',
-  },
-  {
-    num: '05',
-    title: 'The acquired employees are your partners',
-    body: 'Many processes depend on acquired employees taking action themselves — and many may not stay post-TOB. Build relationships early, communicate clearly. They\u2019re going through a big transition too.',
-  },
-  {
-    num: '06',
-    title: 'Ask questions — even the "obvious" ones',
-    body: 'These processes are complex and interconnected. If something doesn\u2019t make sense, ask. You\u2019ll learn faster and your team will appreciate the engagement.',
+    category: 'For Success at IBM',
+    tips: [
+      {
+        num: '06',
+        title: 'Do coffee chats',
+        body: 'Reach out to people across the team and beyond for 15–30 min coffee chats. It\u2019s the best way to learn what others do, build your network, and make your internship feel less overwhelming.',
+      },
+      {
+        num: '07',
+        title: 'Volunteer for events',
+        body: 'IBM runs a lot of internal events — volunteer when you can. It\u2019s a great way to get visibility, meet people outside your immediate team, and show initiative.',
+      },
+      {
+        num: '08',
+        title: 'Go to intern coffee hours and get to know other interns',
+        body: 'The intern community is one of the best parts of IBM. Show up to intern events, grab coffee with other interns, and build those relationships — they\u2019ll last beyond the internship.',
+      },
+    ],
   },
 ]
 
@@ -43,15 +63,22 @@ export default function Tips() {
           Things learned the hard way &mdash; so you don&apos;t have to.
         </p>
 
-        <div className={styles.grid}>
-          {TIPS.map((tip) => (
-            <div key={tip.num} className={styles.card}>
-              <span className={styles.num}>{tip.num}</span>
-              <h4 className={styles.title}>{tip.title}</h4>
-              <p className={styles.body}>{tip.body}</p>
+        {SECTIONS.map((section) => (
+          <div key={section.category} className={styles.categoryBlock}>
+            <h3 className={styles.categoryTitle}>{section.category}</h3>
+            <div className={styles.list}>
+              {section.tips.map((tip) => (
+                <div key={tip.num} className={styles.item}>
+                  <span className={styles.num}>{tip.num}</span>
+                  <div className={styles.content}>
+                    <h4 className={styles.title}>{tip.title}</h4>
+                    <p className={styles.body}>{tip.body}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   )

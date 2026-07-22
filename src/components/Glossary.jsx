@@ -25,9 +25,9 @@ const TERMS = [
   { term: 'CISO',        def: 'Chief Information Security Officer (security approvals, TPSRM reviews)',verified: true },
   { term: 'Fin 122',     def: 'IBM financial close date for an acquisition',                           verified: true },
   { term: 'AR',          def: 'Accounts Receivable',                                                   verified: true },
-  { term: 'DBWI',        def: 'Doing Business with IBM — customer comms sent at TOB',                  verified: false },
-  { term: 'FCT',         def: 'First Commercial Transaction — when entitlement loads begin',            verified: false },
-  { term: 'ASCA',        def: 'Definition pending — used in app certification context',                 verified: false },
+  { term: 'DBWI',        def: '???',                                                                    verified: false },
+  { term: 'FCT',         def: '???',                                                                    verified: false },
+  { term: 'ASCA',        def: '???',                                                                    verified: false },
 ]
 
 export default function Glossary() {
@@ -41,7 +41,7 @@ export default function Glossary() {
         <h2 className="section-title"><strong>Acronyms &amp; Glossary</strong></h2>
         <p className="section-body">
           M&amp;A integrations at IBM come with a lot of acronyms. Items marked in{' '}
-          <span className={styles.pendingLabel}>amber</span> still need verification by the team.
+          <span className={styles.pendingLabel}>amber</span> están pendientes — Fer los edita después.
         </p>
 
         <dl className={styles.grid}>
@@ -55,7 +55,7 @@ export default function Glossary() {
 
         {unverified.length > 0 && (
           <>
-            <p className={styles.pendingHeader}>⚠ Needs verification</p>
+            <p className={styles.pendingHeader}>⚠ Pendiente — Fer edita después</p>
             <dl className={styles.grid}>
               {unverified.map(({ term, def }) => (
                 <div key={term} className={`${styles.item} ${styles.itemPending}`}>
