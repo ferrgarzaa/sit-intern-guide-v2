@@ -1,0 +1,41 @@
+.section {
+  padding: 64px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1px;
+  background: #e0e0e0;
+  border: 1px solid #e0e0e0;
+  margin-top: 32px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 20px 24px;
+  border-left: 3px solid #0f62fe;
+}
+
+.card:hover { background: #f4f4f4; }
+
+.term {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f62fe;
+  margin-bottom: 2px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.full {
+  font-size: 12px;
+  color: #8d8d8d;
+  margin-bottom: 6px;
+}
+
+.desc {
+  font-size: 13px;
+  color: #525252;
+  line-height: 1.6;
+}

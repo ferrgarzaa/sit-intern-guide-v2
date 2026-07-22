@@ -1,0 +1,112 @@
+.section {
+  padding: 64px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.timeline {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.item {
+  display: flex;
+  gap: 0;
+}
+
+.lineCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40px;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid #ffffff;
+  outline-offset: 0;
+  z-index: 1;
+}
+
+.dot_complete {
+  background: #0f62fe;
+  outline: 2px solid #0f62fe;
+}
+
+.dot_inprogress {
+  background: #f1c21b;
+  outline: 2px solid #f1c21b;
+}
+
+.line {
+  flex: 1;
+  width: 2px;
+  background: #e0e0e0;
+  min-height: 32px;
+}
+
+.content {
+  flex: 1;
+  padding-bottom: 40px;
+  padding-left: 8px;
+}
+
+.companyRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.company {
+  font-size: 20px;
+  font-weight: 600;
+  color: #161616;
+}
+
+.dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 10px;
+}
+
+.dateItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dateLabel {
+  font-size: 11px;
+  color: #8d8d8d;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+}
+
+.dateValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: #161616;
+}
+
+.dateTbd {
+  font-size: 14px;
+  color: #a8a8a8;
+  font-style: italic;
+}
+
+.note {
+  font-size: 13px;
+  color: #525252;
+  font-style: italic;
+  margin-top: 4px;
+}

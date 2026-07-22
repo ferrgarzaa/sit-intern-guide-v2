@@ -1,0 +1,122 @@
+/* IBM Design Tokens */
+:root {
+  --ibm-blue-60: #0f62fe;
+  --ibm-blue-70: #0043ce;
+  --ibm-blue-20: #d0e2ff;
+  --ibm-blue-10: #edf5ff;
+  --ibm-gray-100: #161616;
+  --ibm-gray-90: #262626;
+  --ibm-gray-80: #393939;
+  --ibm-gray-20: #e0e0e0;
+  --ibm-gray-10: #f4f4f4;
+  --ibm-white: #ffffff;
+  --ibm-green-40: #42be65;
+  --ibm-green-20: #defbe6;
+  --ibm-green-70: #0e6027;
+  --ibm-yellow-30: #f1c21b;
+  --ibm-yellow-10: #fcf4d6;
+  --ibm-yellow-70: #684e0f;
+  --ibm-red-60: #da1e28;
+  --ibm-purple-60: #8a3ffc;
+
+  --text-primary: #161616;
+  --text-secondary: #525252;
+  --text-placeholder: #a8a8a8;
+  --border-subtle: #e0e0e0;
+  --layer-01: #f4f4f4;
+  --layer-02: #ffffff;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--ibm-white);
+}
+
+a {
+  color: var(--ibm-blue-60);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4 { font-weight: 600; line-height: 1.25; }
+
+/* Utility */
+.container {
+  max-width: 1056px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media (max-width: 672px) {
+  .container { padding: 0 16px; }
+}
+
+/* Tag / Badge */
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 2px;
+  letter-spacing: 0.16px;
+}
+.tag-blue { background: var(--ibm-blue-10); color: var(--ibm-blue-60); border: 1px solid var(--ibm-blue-20); }
+.tag-green { background: var(--ibm-green-20); color: var(--ibm-green-70); }
+.tag-yellow { background: var(--ibm-yellow-10); color: var(--ibm-yellow-70); }
+
+/* Section headings */
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--ibm-blue-60);
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+.section-title strong { font-weight: 600; }
+
+.section-body {
+  font-size: 15px;
+  color: var(--text-secondary);
+  max-width: 640px;
+  line-height: 1.7;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 0;
+}
+
+/* Pain-point callout */
+.callout-warning {
+  background: var(--ibm-yellow-10);
+  border-left: 3px solid var(--ibm-yellow-30);
+  padding: 10px 14px;
+  margin: 12px 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+  border-radius: 0 2px 2px 0;
+}
+.callout-warning strong { color: var(--ibm-yellow-70); }

@@ -1,0 +1,61 @@
+.hero {
+  background: #0f62fe;
+  color: #ffffff;
+  padding: 64px 0 56px;
+}
+
+.inner {
+  max-width: 720px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #a6c8ff;
+  margin-bottom: 16px;
+}
+
+.heading {
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.heading strong {
+  font-weight: 600;
+  display: block;
+}
+
+.body {
+  font-size: 16px;
+  color: #c0d8ff;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 560px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 2px;
+  color: #ffffff;
+  letter-spacing: 0.16px;
+}
+
+@media (max-width: 672px) {
+  .heading { font-size: 28px; }
+}
