@@ -1,13 +1,12 @@
 import styles from './AboutTeam.module.css'
 
 const TEAM = [
-  { name: 'Jon Correnti',           role: 'Team Lead',                                    email: null },
+  { name: 'Jon Correnti',           role: 'Vice President of Integration',                 email: 'jcorrenti@us.ibm.com' },
   { name: 'Isabel Landy',           role: 'Transformation Engagement Manager',             email: 'Isabel.Landy@ibm.com' },
   { name: 'Sean Lynch',             role: 'T&O Integration Specialist',                    email: 'Sean.Lynch1@ibm.com' },
   { name: 'Sanya Mahajan',          role: 'Program Manager',                               email: 'Sanya.Mahajan@ibm.com' },
   { name: 'Stephen Ventura',        role: 'Lead Consultant, M&A Operations Integration',   email: 'Stephen.Ventura@ibm.com' },
   { name: 'Anson Wu',               role: 'Strategy Consultant',                           email: null },
-  { name: 'Sphoorthy Selvaraj',     role: 'Team Member',                                  email: null },
   { name: 'Izzy Vilensky',          role: 'Integration Operations Intern',                 email: 'Isabel.Vilensky@ibm.com', intern: true },
   { name: 'Fernanda Garza Martínez',role: 'Integration Operations Intern',                 email: null, intern: true },
 ]
